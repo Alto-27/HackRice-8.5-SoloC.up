@@ -31,8 +31,10 @@ document.getElementById("myText").addEventListener("input", function() {
             break;
     }
     
+
+    document.getElementById('myOutput').value = num * convertFactor; 
     if (document.getElementById('myOutput').value <= 0.1875) {
-        document.getElementById('myOutput').value = num * convertFactor + 10000;
+        document.getElementById('myOutput').value = num * convertFactor + " shots";
 
     } else {
         document.getElementById('myOutput').value = num * convertFactor;
