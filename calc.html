@@ -2,11 +2,48 @@
 <html>
 <head>
 <style>
+p.serif {
+    font-family: "Times New Roman", Times, serif;
+}
+                
+p.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    position: relative;
+    top: 20px;
+    left: 10px;
+}
+
+.header img {
+    float: left;
+    width: 80px;
+    height: 80px;
+}
+
+.header h2 {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+#conversion {
+    position: relative;
+    left: 10px;
+    top: 8px;
+}
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 500px;
   height: 40px;
+  position: relative;
+  top: 15px;
+  left: 10px;
+  border-collapse:separate;
+    border:solid #ff5667 1px;
+    border-radius:6px;
+    -moz-border-radius:6px;
 }
 
 td, th {
@@ -22,13 +59,13 @@ tr:nth-child(even) {
 </head>
 <body>
 
-<h2>Solo Cup Calculator</h2>
+<div class="header"> <h2> Solo Cup Calculator</h2>
+    <img src="solocup_image_128.png" width="80" height="80"> <!-- Solo Cup Image -->
+</div>    
 
 
-<img class="one" src="solocup_image_128.png" width="80" height="80"> <!-- Solo Cup Image -->
 
-
-<table style="background-color:#ff5667">  <!-- #ea192e; -->
+<table style="background-color:#ff5667"> 
   <tr> <!-- Editable Textbox -->
     <td> <input type="text" id="myText" value="Value"></td> 
     
@@ -54,9 +91,11 @@ tr:nth-child(even) {
 
 </table>
 
-<p>*** Disclaimer: Please do not use our Solo Cup Calculator for medicine dosages or more serious cooking endeavours. *** </p>
+<p class="sansserif">*** Disclaimer: Please do not use our Solo Cup Calculator for medicine dosages or more serious cooking endeavours. *** </p>
 
-<button id="conversion" onclick="convert()">Convert!</button>
+
+<button id="conversion" onclick="convert()">Convert!</button> <!-- Button -->
+
 </body>
 <script src="calc.js"></script>
 </html>
