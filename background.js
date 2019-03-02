@@ -6,4 +6,4 @@
        ]);
 
        //Suggestions shall be 
-      })
+      });
