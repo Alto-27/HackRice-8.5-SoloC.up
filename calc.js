@@ -41,9 +41,9 @@ document.getElementById("myText").addEventListener("input", function() {
             //we need to change the display from solo --> shot glasses depending on the input 
             document.getElementById("htmlUnits").innerHTML = "Shot(s)";
             if ((num * convertFactor * (32.0/3.0)).toFixed(5) % 1 == 0) {
-                document.getElementById('myOutput').value = (num * convertFactor * (32.0/3.0)) + " shots";
+                document.getElementById('myOutput').value = (num * convertFactor * (32.0/3.0));
             } else {
-                document.getElementById('myOutput').value = (num * convertFactor * (32.0/3.0)).toFixed(5) + " shots";
+                document.getElementById('myOutput').value = (num * convertFactor * (32.0/3.0)).toFixed(5);
             }
 
         } else {
