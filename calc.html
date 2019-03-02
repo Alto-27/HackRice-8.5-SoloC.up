@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #ff5959;
+  text-align: left;
+  padding: 4px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Solo Cup Calculator</h2>
+
+<table>
+  <tr> <!-- Editable Textbox -->
+    <td> <input type="text" id="myText" value="Value"></td> 
+    
+    <td><form> <!-- Dropdown List -->
+  <select id="mySelect"> 
+    <option value="gallons">Gallons</option>
+    <option value="cups">Cups</option>
+    <option value="ounces">Ounces</option>
+    <option value="pints">Pints</option>
+  </select>
+</form></td>
+
+    <td>=</td> <!-- Equal Sign -->
+    
+    <td><textarea rows="2" cols="15">  <!-- Un-Editable Textbox -->
+Output!!!!
+</textarea></td>
+
+    <td>Solo Cups</td> <!-- "Solo Cups" -->
+    
+  </tr>
+
+</table>
+
+</body>
+</html>
