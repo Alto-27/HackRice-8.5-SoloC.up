@@ -34,9 +34,16 @@
 
 .bottomright{
     position: absolute;
-    bottom: -5px;
+    bottom: 2px;
     right: 16px;
     left: 5px;
+}
+
+.seconddisclaimer{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    bottom: -28px;
+    font-style: italic;
 }
 
 td.serif {
@@ -90,7 +97,7 @@ textarea {
 </style>
 </head>
 <body>
-<div class="container" style="height:170px; width:350px">
+<div class="container" style="height:175px; width:350px">
 <h2 class="topright">Solo Cup Converter</h2>
     <img class="topleft" src="solocup_image_128.png"> <!-- Solo Cup Image -->
 
@@ -100,8 +107,8 @@ textarea {
     
     <td><form> <!-- Dropdown List -->
   <select id="mySelect"> 
-    <option value="gallons">Gallons</option>
     <option value="cups">Cups</option>
+    <option value="gallons">Gallons</option>
     <option value="ounces">Ounces</option>
     <option value="pints">Pints</option>
     <option value="quarts">Quarts</option>
@@ -121,6 +128,7 @@ textarea {
 </table>
 
 <p class="bottomright sansserif">*** Disclaimer: Please do not use our Solo Cup Calculator for medicine dosages or more serious cooking endeavours. </p>
+<p class="bottomright seconddisclaimer">*** Any output below 0.28125 (9/32) solo cups will display in terms of shot glasses in the calculator. Multiply by (32/3) to convert back to solo cups. </p>
 </div>
 </body>
 <script src="calc.js"></script>
