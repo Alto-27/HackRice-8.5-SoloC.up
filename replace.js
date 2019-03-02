@@ -9,7 +9,7 @@ for (var i = 0; i < elements.length; i++) {
         if (node.nodeType === 3) {
             var text = node.nodeValue;
 			
-			var regex1 = /(\d+|\d+.\d+|\d+\/\d+)( |)(ounce|ounces|oz|gallons|gal|teaspoon|tablespoon)/gi
+			var regex1 = /(\d+|\d+.\d+|\d+\/\d+)( |)(pt|pint|pints|qt|quart|quarts|cup|cups|ounce|ounces|oz|gallon|gallons|gal|teaspoons|teaspoon|tsp|tablespoons|tablespoon|tbsp)/gi
 			var replace1 = '[SOLO CUP MEASUREMENT]'
 			
             var replacedText = text.replace(regex1, replace1);
