@@ -34,7 +34,7 @@ document.getElementById("myText").addEventListener("input", function() {
 
     document.getElementById('myOutput').value = num * convertFactor; 
     if (document.getElementById('myOutput').value <= 0.1875) {
-        document.getElementById('myOutput').value = num * convertFactor + " shots";
+        document.getElementById('myOutput').value = num * convertFactor * 16.0 + " shots";
 
     } else {
         document.getElementById('myOutput').value = num * convertFactor;
