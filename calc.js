@@ -34,6 +34,7 @@ document.getElementById("myText").addEventListener("input", function() {
     document.getElementById('myOutput').value = (num * convertFactor).toFixed(5); 
 
         if (document.getElementById('myOutput').value <= 0.28125) {
+            
             if ((num * convertFactor * (32.0/3.0)).toFixed(5) % 1 == 0) {
                 document.getElementById('myOutput').value = (num * convertFactor * (32.0/3.0)) + " shots";
             } else {
