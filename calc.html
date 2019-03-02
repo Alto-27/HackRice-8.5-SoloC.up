@@ -33,8 +33,8 @@ p.sansserif {
 
 #conversion {
     position: relative;
-    left: 10px;
-    top: 8px;
+    right: 72px;
+    top: 12px;
 }
 
 textarea {
@@ -64,6 +64,9 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+textarea {
+  resize: none;
+}
 </style>
 </head>
 <body>
@@ -72,10 +75,13 @@ tr:nth-child(even) {
     <img src="solocup_image_128.png" width="80" height="80"> <!-- Solo Cup Image -->
 </div>    
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 406a8105eee31b2e2b1c51ebebcdb8dcca435b58
 <table style="background-color:#ff5667"> 
   <tr> <!-- Editable Textbox -->
-    <td> <input type="text" id="myText" value="(Value)"></td> 
+    <td> <input rows="1" cols="10" type="text" id="myText" value="(Value)" style = "width: 75px"></td> 
     
     <td><form> <!-- Dropdown List -->
   <select id="mySelect"> 
