@@ -30,5 +30,11 @@ document.getElementById("myText").addEventListener("input", function() {
         default:
             break;
     }
-    document.getElementById('myOutput').value = num * convertFactor;
+    
+    if (document.getElementById('myOutput').value <= 0.1875) {
+        document.getElementById('myOutput').value = num * convertFactor + 10000;
+
+    } else {
+        document.getElementById('myOutput').value = num * convertFactor;
+    }
 });
