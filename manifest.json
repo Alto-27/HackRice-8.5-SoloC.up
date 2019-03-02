@@ -27,14 +27,6 @@
     "background": {
         "scripts": ["background.js"],
         "persistent": false
-    },
-
-    "omnibox": {"keyword" : "scc"},
-
-
-    
-    "chrome_url_overrides":{
-        "newtab": "calc.html"
     }
 
 
