@@ -30,17 +30,14 @@ document.getElementById("myText").addEventListener("input", function() {
         default:
             break;
     }
-    
+
 
     document.getElementById('myOutput').value = num * convertFactor; 
+    if (document.getElementById('myOutput').value <= 0.1875) {
+        document.getElementById('myOutput').value = num * convertFactor * 16.0 + " shots";
+    }
 
-        if (document.getElementById('myOutput').value <= 0.1875) {
-            document.getElementById('myOutput').value = num * convertFactor * 16.0 + " shots";
-
-        } else {
-            document.getElementById('myOutput').value = num * convertFactor;
-        }
-
-    
-
+    } else {
+        document.getElementById('myOutput').value = num * convertFactor;
+    }
 });
