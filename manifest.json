@@ -1,0 +1,41 @@
+{
+    "name": "soloc.up",
+    "manifest_version": 2,
+    "version": "1.0",
+    "description": "Convert imperial liquid units into Solo Cup measurements.",
+
+    "browser_action":{
+
+    "default_icon": {
+        "16": "solocup_image_16.png",
+        "32": "solocup_image_32.png",
+        "48": "solocup_image_48.png",
+        "128": "solocup_image_128.png"
+      }
+
+    
+
+    },
+
+      "icons": {
+        "16": "solocup_image_16.png",
+        "32": "solocup_image_32.png",
+        "48": "solocup_image_48.png",
+        "128": "solocup_image_128.png"
+      },
+ 
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+
+    "omnibox": {"keyword" : "scc"},
+
+
+    
+    "chrome_url_overrides":{
+        "newtab": "calc.html"
+    }
+
+
+}
