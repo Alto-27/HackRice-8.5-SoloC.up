@@ -13,11 +13,13 @@ function convert() {
             convertFactor = 0.5;
             break;
         case "teaspoons":
+            convertFactor = 1.0 / 96;
             break;
         case "ounces":
             convertFactor = 1.0 / 16;
             break;
         case "tablespoons":
+            convertFactor = 1.0 / 32;
             break;
         case "quarts":
             convertFactor = 2.0;
