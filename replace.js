@@ -9,8 +9,8 @@ for (var i = 0; i < elements.length; i++) {
         if (node.nodeType === 3) {
             var text = node.nodeValue;
 			
-			var regex1 = /English/gi
-			var replace1 = 'jumbo ravioli'
+			var regex1 = /(\d+|\d+.\d+|\d+\/\d+)( |)(ounce|ounces|oz|gallons|gal|teaspoon|tablespoon)/gi
+			var replace1 = '[SOLO CUP MEASUREMENT]'
 			
             var replacedText = text.replace(regex1, replace1);
 			
