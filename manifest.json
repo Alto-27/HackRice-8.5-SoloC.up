@@ -1,7 +1,7 @@
 {
-    "name": "soloc.up",
+    "name": "Solo Cup Converter",
     "manifest_version": 2,
-    "version": "1.1",
+    "version": "1.2",
     "description": "Convert imperial liquid units into Solo Cup measurements.",
 
     "browser_action":{
