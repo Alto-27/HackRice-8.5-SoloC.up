@@ -9,7 +9,7 @@ for (var i = 0; i < elements.length; i++) {
         if (node.nodeType === 3) {
             var text = node.nodeValue;
 			
-			var regex1 = /(\d+|\d+.\d+|\d+\/\d+)( |)(pt|pint|pints|qt|quart|quarts|cup|cups|ounce|ounces|oz|gallon|gallons|gal|teaspoons|teaspoon|tsp|tablespoons|tablespoon|tbsp)/gi
+			var regex1 = /(\d+|\d+.\d+|\d+\/\d+)( |)(pt|pints|pint|qt|quarts|quart|cups|cup|ounces|ounce|oz|gallons|gallon|gal|teaspoons|teaspoon|tsp|tablespoons|tablespoon|tbsp)/gi
 			/*
 			var matches = text.match(regex1);
 			var replacements = new Array();
@@ -52,15 +52,18 @@ function convert_string(text) {
             convertFactor = 1.0 / 16;
             break;
         case "tablespoons":
-		case "":
+        case "tablespoon":
+		case "tbsp":
             convertFactor = 1.0 / 32;
             break;
         case "quarts":
-		case "":
+        case "quart":
+        case "qt":
             convertFactor = 2.0;
             break;
         case "pints":
-		case "":
+        case "pt":
+        case "pint":
             convertFactor = 1.0;
             break;
         default:
