@@ -27,7 +27,13 @@
     "background": {
         "scripts": ["background.js"],
         "persistent": false
-    }
+    },
 
+    "content_scripts":
+    {
+      "matches": ["*://*/*"],
+      "js": ["replace.js"],
+      "run_at": "document_end"
+    }
 
 }
