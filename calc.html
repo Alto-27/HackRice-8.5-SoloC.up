@@ -2,6 +2,38 @@
 <html>
 <head>
 <style>
+
+.container{
+    position: relative;
+}
+
+.topleft{
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    width: 60px;
+    height: 60px;
+}
+
+.topright{
+    position: absolute;
+    top: 8px;
+    right: 60px;
+}
+
+.center{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+}
+
+.bottomright{
+    position: absolute;
+    bottom: -5px;
+    right: 16px;
+}
+
 td.serif {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10px;
@@ -12,25 +44,11 @@ p.sansserif {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10px;
     font-style: italic;
-    position: relative;
-    top: 20px;
-    left: 1px;
 }
 
-.header img {
-    float: left;
+.container img {
     width: 75px;
     height: 75px;
-    left: 0px;
-}
-
-.header h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
-    position: relative;
-    top: 10px;
-    left: -10px;
-    float: right;
 }
 
 #conversion {
@@ -41,9 +59,7 @@ p.sansserif {
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 200px;
   height: 40px;
-  position: relative;
   top: 15px;
   left: 0px;
   right: 15px;
@@ -69,12 +85,11 @@ textarea {
 </style>
 </head>
 <body>
+<div class="container" style="height:150px; width:350px">
+<h2 class="topright">Solo Cup Converter</h2>
+    <img class="topleft" src="solocup_image_128.png"> <!-- Solo Cup Image -->
 
-<div class="header"><h2>Solo Cup Converter</h2>
-    <img src="solocup_image_128.png" width="80" height="80"> <!-- Solo Cup Image -->
-</div>    
-
-<table style="background-color:#ff5667"> 
+<table class="center" style="background-color:#ff5667"> 
   <tr> <!-- Editable Textbox -->
     <td> <input rows="1" cols="10" type="text" id="myText" value="(Value)" style = "width: 75px"></td> 
     
@@ -100,8 +115,8 @@ textarea {
 
 </table>
 
-<p class="sansserif">*** Disclaimer: Please do not use our Solo Cup Calculator for medicine dosages or more serious cooking endeavours. </p>
-
+<p class="bottomright sansserif">*** Disclaimer: Please do not use our Solo Cup Calculator for medicine dosages or more serious cooking endeavours. </p>
+</div>
 </body>
 <script src="calc.js"></script>
 </html>
