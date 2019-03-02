@@ -28,24 +28,27 @@ for (var i = 0; i < elements.length; i++) {
     }
 }
 
-function convert_string(text){
+function convert_string(text) {
 	
 	let convertFactor = 1.0;
 	switch(unit) {
         case "gallons":
-		case "":
+        case "gal":
+        case "gallon":
             convertFactor = 8.0;
             break;
         case "cups":
-		case "":
+		case "cup":
             convertFactor = 0.5;
             break;
         case "teaspoons":
-		case "":
+        case "teaspoon":
+        case "tsp":
             convertFactor = 1.0 / 96;
             break;
         case "ounces":
-		case "":
+        case "oz":
+        case "ounce":
             convertFactor = 1.0 / 16;
             break;
         case "tablespoons":
@@ -62,4 +65,5 @@ function convert_string(text){
             break;
         default:
             break;
+    }
 }
