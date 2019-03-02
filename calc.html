@@ -2,8 +2,10 @@
 <html>
 <head>
 <style>
-p.serif {
-    font-family: "Arial Black", Gadget, sans-serif;
+td.serif {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-style: bold;
 }
                 
 p.sansserif {
@@ -33,6 +35,10 @@ p.sansserif {
     position: relative;
     left: 10px;
     top: 8px;
+}
+
+textarea {
+   resize: none;
 }
 
 table {
@@ -66,7 +72,7 @@ tr:nth-child(even) {
     <img src="solocup_image_128.png" width="80" height="80"> <!-- Solo Cup Image -->
 </div>    
 
-<font size="3" face="Courier New">
+
 <table style="background-color:#ff5667"> 
   <tr> <!-- Editable Textbox -->
     <td> <input type="text" id="myText" value="(Value)"></td> 
@@ -83,16 +89,15 @@ tr:nth-child(even) {
   </select>
 </form></td>
 
-    <td>=</td> <!-- Equal Sign -->
+    <td class="serif">=</td> <!-- Equal Sign -->
     
-    <td><textarea rows="2" cols="15" readonly id="myOutput"></textarea></td><!-- Un-Editable Textbox Output!!!!-->
+    <td><textarea rows="1" cols="10" readonly id="myOutput"></textarea></td><!-- Un-Editable Textbox Output!!!!-->
 
     <td class="serif">Solo Cups</td> <!-- "Solo Cups" -->
     
   </tr>
 
 </table>
-</font>
 
 <p class="sansserif">*** Disclaimer: Please do not use our Solo Cup Calculator for medicine dosages or more serious cooking endeavours. </p>
 
