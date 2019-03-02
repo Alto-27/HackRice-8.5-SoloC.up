@@ -32,8 +32,14 @@ document.getElementById("myText").addEventListener("input", function() {
     }
 
     document.getElementById('myOutput').value = (num * convertFactor).toFixed(5); 
-
+        //check to see if the units of measure is still shot glasses, and change back to solo cups when needed
+        if(document.getElementById('myOutput').value > 0.28125)
+        {
+            document.getElementById("htmlUnits").innerHTML = "Solo Cup(s)";
+        }
         if (document.getElementById('myOutput').value <= 0.28125) {
+            //we need to change the display from solo --> shot glasses depending on the input 
+            document.getElementById("htmlUnits").innerHTML = "Shot(s)";
             if ((num * convertFactor * (32.0/3.0)).toFixed(5) % 1 == 0) {
                 document.getElementById('myOutput').value = (num * convertFactor * (32.0/3.0)) + " shots";
             } else {
