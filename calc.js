@@ -52,3 +52,10 @@ document.getElementById("myText").addEventListener("input", function() {
 
 
 });
+document.getElementById("jrav").addEventListener("click", function() 
+{
+        chrome.tabs.executeScript({
+          file: 'replace.js'
+        }); 
+      
+});

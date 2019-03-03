@@ -11,11 +11,11 @@ for (var i = 0; i < elements.length; i++) {
 			
 			var regex1 = /(\d+|\d+.\d+|\d+\/\d+)( |)(pt|pints|pint|qt|quarts|quart|cups|cup|ounces|ounce|oz|gallons|gallon|gal|teaspoons|teaspoon|tsp|tablespoons|tablespoon|tbsp)/gi
 			
-			var matches = text.match(regex1);
-			var replacements = new Array(matches.length);
-			for (var k = 0; k < matches.length; k++){
-                replacements[k] = convert_string(matches[k]);
-			}
+			//var matches = text.match(regex1);
+			//var replacements = new Array(matches.length);
+			//for (var k = 0; k < matches.length; k++){
+               // replacements[k] = convert_string(matches[k]);
+			//}
 			
 			var replace1 = '[SOLO CUP MEASUREMENT]'
 			

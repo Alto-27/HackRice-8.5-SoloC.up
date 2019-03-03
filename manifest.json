@@ -16,6 +16,10 @@
       }
 
     },
+      "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+      },
 
       "icons": {
         "16": "solocup_image_16.png",
@@ -23,19 +27,14 @@
         "48": "solocup_image_48.png",
         "128": "solocup_image_128.png"
       },
- 
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": false
-    },
 
-    "content_scripts":
-    [
-      {
-      "matches": ["*://*/*"],
-      "js": ["replace.js"],
-      "run_at": "document_end"
-    }
-  ]
+      "permissions": [
+        "tabs", "<all_urls>"
+      ]
+    
+ 
+    
+
+   
 
 }
