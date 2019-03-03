@@ -2,7 +2,7 @@
     "name": "Solo Cup Converter",
     "manifest_version": 2,
     "version": "1.2",
-    "description": "Convert imperial liquid units into Solo Cup measurements.",
+    "description": "Automatically converts imperial liquid units on websites into Solo Cup measurements; also has a functional calculator.",
 
     "browser_action":{
 
