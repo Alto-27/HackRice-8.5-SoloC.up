@@ -62,4 +62,5 @@ function convert_string(text){
             break;
         default:
             break;
+	}
 }
