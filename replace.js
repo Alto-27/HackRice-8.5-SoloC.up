@@ -10,13 +10,13 @@ for (var i = 0; i < elements.length; i++) {
             var text = node.nodeValue;
 			
 			var regex1 = /(\d+|\d+.\d+|\d+\/\d+)( |)(pt|pints|pint|qt|quarts|quart|cups|cup|ounces|ounce|oz|gallons|gallon|gal|teaspoons|teaspoon|tsp|tablespoons|tablespoon|tbsp)/gi
-			/*
+			
 			var matches = text.match(regex1);
-			var replacements = new Array();
+			var replacements = new Array(matches.length);
 			for (var k = 0; k < matches.length; k++){
-				
+                replacements[k] = convert_string(matches[k]);
 			}
-			*/
+			
 			var replace1 = '[SOLO CUP MEASUREMENT]'
 			
             var replacedText = text.replace(regex1, replace1);
@@ -29,7 +29,9 @@ for (var i = 0; i < elements.length; i++) {
 }
 
 function convert_string(text) {
-	
+    let str_arr = text.split(/(d+.d+|d+\/d+|d+)( |)/);
+    let unit = str_arr[1];
+    let num = parseInt(str_arr[0]);
 	let convertFactor = 1.0;
 	switch(unit) {
         case "gallons":
@@ -69,4 +71,7 @@ function convert_string(text) {
         default:
             break;
     }
+    num *= conversionFactor
+    
+    return num + " solocups";
 }
