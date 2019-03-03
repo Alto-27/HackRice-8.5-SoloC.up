@@ -9,30 +9,43 @@ for (var i = 0; i < elements.length; i++) {
         if (node.nodeType === 3) {
             var text = node.nodeValue;
 			
-			var regex1 = /(\d+|\d+.\d+|\d+\/\d+)( |)(pt|pints|pint|qt|quarts|quart|cups|cup|ounces|ounce|oz|gallons|gallon|gal|teaspoons|teaspoon|tsp|tablespoons|tablespoon|tbsp)/gi
+			var regex1 = /(\d+.\d+|\d+\/\d+|\d+)( |)(pt|pints|pint|qt|quarts|quart|cups|cup|ounces|ounce|oz|gallons|gallon|gal|teaspoons|teaspoon|tsp|tablespoons|tablespoon|tbsp)/gi
 			
-			//var matches = text.match(regex1);
-			//var replacements = new Array(matches.length);
-			//for (var k = 0; k < matches.length; k++){
-               // replacements[k] = convert_string(matches[k]);
-			//}
+			var replacedText = text;
+			var matches = text.match(regex1);
+			var replacements = new Array(matches.length);
+			for (var k = 0; k < matches.length; k++){
+                replacements[k] = convert_string(matches[k]);
+			}
+			if (matches != null){
+				var replaceStrings = new Array(matches.length);
+				for (var k = 0; k < matches.length; k++){
+					replaceStrings[k] = convert_string(matches[k]);											
+				}
+				for (var k = 0; k < matches.length; k++){
+					replacedText = replacedText.replace(matches[k], replaceStrings[k]);	
+				}
+				if (replacedText !== text) {
+						element.replaceChild(document.createTextNode(replacedText), node);
+				}
+			}
 			
-			var replace1 = '[SOLO CUP MEASUREMENT]'
 			
-            var replacedText = text.replace(regex1, replace1);
+			//var replacedText = text.replace(regex1, dummyString);
 			
-            if (replacedText !== text) {
-                element.replaceChild(document.createTextNode(replacedText), node);
-            }
+								
         }
     }
 }
 
 function convert_string(text) {
-    let str_arr = text.split(/(d+.d+|d+\/d+|d+)( |)/);
-    let unit = str_arr[1];
-    let num = parseInt(str_arr[0]);
-	let convertFactor = 1.0;
+	alert(text);
+    var str_arr = text.split(/ /);
+	var num = parseFloat(str_arr[0]);
+    var unit = str_arr[1];
+	alert(num);
+	alert(unit);
+	var convertFactor = 1.0;
 	switch(unit) {
         case "gallons":
         case "gal":
@@ -71,7 +84,8 @@ function convert_string(text) {
         default:
             break;
     }
-    num *= conversionFactor
+    num *= convertFactor;
     
-    return num + " solocups";
+    alert(num + " solocups");
+	return num + " solocups";
 }

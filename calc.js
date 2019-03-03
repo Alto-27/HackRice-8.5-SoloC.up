@@ -48,15 +48,5 @@ document.getElementById("myText").addEventListener("input", function() {
 
         } else {
             document.getElementById('myOutput').value = num * convertFactor;
-        }
-
-
-});
-document.getElementById("jrav").addEventListener("click", function() 
-{
-        chrome.tabs.executeScript({
-          file: 'replace.js',
-          
-        }); 
-      
+        };
 });
